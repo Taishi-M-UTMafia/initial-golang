@@ -1,11 +1,7 @@
 package main
 
-import (
-	"fmt"
-)
-
 func main() {
-	// cards := newDeck()
+	cards := newDeck()
 
 	// // receiver on function
 	// // cards.print()
@@ -14,6 +10,6 @@ func main() {
 
 	// hand.print()
 	// remainingCards.print()
-	greeting := "Hi there!"
-	fmt.Println([]byte(greeting))
+
+	cards.saveToFile("MyCards")
 }
