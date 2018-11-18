@@ -1,7 +1,7 @@
 package main
 
 func main() {
-	cards := newDeck()
+	// cards := newDeck()
 
 	// // receiver on function
 	// // cards.print()
@@ -11,5 +11,8 @@ func main() {
 	// hand.print()
 	// remainingCards.print()
 
-	cards.saveToFile("MyCards")
+	// cards.saveToFile("MyCards")
+
+	cards := newDeckFromFile("My")
+	cards.print()
 }
