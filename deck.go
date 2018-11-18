@@ -21,7 +21,7 @@ func newDeck() deck {
 	// indexである変数i, jは使わないので_に置き換える
 	for _, suit := range cardSuits {
 		for _, value := range cardValues {
-			cards = append(cards, suit+" of "+value)
+			cards = append(cards, value+" of "+suit)
 		}
 	}
 
