@@ -38,7 +38,7 @@ func main() {
 	// fmt.Printf("%+v", alex)
 
 	jim := person{
-		firstName: "Alex",
+		firstName: "Jim",
 		lastName:  "Party",
 		contactInfo: contactInfo{
 			email:   "jimpgmail.com",
@@ -46,7 +46,11 @@ func main() {
 		},
 	}
 
-	jimPointer := &jim
-	jimPointer.updateName("jimmy")
+	// jimPointer := &jim
+	// jimPointer.updateName("Jimmy")
+
+	// updateNameのreceiverのtypeは*personな一方で
+	// jimの方はただのpersonだが、そこはgoがよしなにやってくれる
+	jim.updateName("Jimmy")
 	jim.print()
 }
