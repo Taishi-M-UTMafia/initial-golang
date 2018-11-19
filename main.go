@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 // ---------------------------------------------
 // Cards
 // ---------------------------------------------
@@ -27,30 +29,53 @@ package main
 // ---------------------------------------------
 // Structs
 // ---------------------------------------------
+// func main() {
+// alex := person{firstName: "Alex", lastName: "Anderson"}
+// var alex person
+
+// alex.firstName = "Alex"
+// alex.lastName = "Anderson"
+
+// fmt.Println(alex)
+// fmt.Printf("%+v", alex)
+
+// jim := person{
+// 	firstName: "Jim",
+// 	lastName:  "Party",
+// 	contactInfo: contactInfo{
+// 		email:   "jimpgmail.com",
+// 		zipCode: 94000,
+// 	},
+// }
+
+// jimPointer := &jim
+// jimPointer.updateName("Jimmy")
+
+// updateNameのreceiverのtypeは*personな一方で
+// jimの方はただのpersonだが、そこはgoがよしなにやってくれる
+// jim.updateName("Jimmy")
+// jim.print()
+// }
+
+// ---------------------------------------------
+// Maps
+// ---------------------------------------------
 func main() {
-	// alex := person{firstName: "Alex", lastName: "Anderson"}
-	// var alex person
+	// structと似てる！
 
-	// alex.firstName = "Alex"
-	// alex.lastName = "Anderson"
+	// colors := map[string]string{
+	// 	"red":   "#ff0000",
+	// 	"green": "#4327as",
+	// }
 
-	// fmt.Println(alex)
-	// fmt.Printf("%+v", alex)
+	// var colors map[string]string
 
-	jim := person{
-		firstName: "Jim",
-		lastName:  "Party",
-		contactInfo: contactInfo{
-			email:   "jimpgmail.com",
-			zipCode: 94000,
-		},
-	}
+	colors := make(map[string]string)
+	// structだとcolors.white = hogeみたいな感じになるという相違点
+	// keyとvalueの肩が指定されている(structはされてない)
+	colors["white"] = "#fff"
 
-	// jimPointer := &jim
-	// jimPointer.updateName("Jimmy")
+	delete(colors, "white")
 
-	// updateNameのreceiverのtypeは*personな一方で
-	// jimの方はただのpersonだが、そこはgoがよしなにやってくれる
-	jim.updateName("Jimmy")
-	jim.print()
+	fmt.Println(colors)
 }
