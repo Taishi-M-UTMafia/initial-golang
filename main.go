@@ -1,22 +1,52 @@
 package main
 
+// ---------------------------------------------
+// Cards
+// ---------------------------------------------
+// func main() {
+// cards := newDeck()
+
+// // receiver on function
+// // cards.print()
+
+// hand, remainingCards := deal(cards, 5)
+
+// hand.print()
+// remainingCards.print()
+
+// cards.saveToFile("MyCards")
+
+// cards := newDeckFromFile("MyCards")
+// cards.print()
+
+// cards := newDeck()
+// cards.shuffle()
+// cards.print()
+// }
+
+// ---------------------------------------------
+// Structs
+// ---------------------------------------------
 func main() {
-	// cards := newDeck()
+	// alex := person{firstName: "Alex", lastName: "Anderson"}
+	// var alex person
 
-	// // receiver on function
-	// // cards.print()
+	// alex.firstName = "Alex"
+	// alex.lastName = "Anderson"
 
-	// hand, remainingCards := deal(cards, 5)
+	// fmt.Println(alex)
+	// fmt.Printf("%+v", alex)
 
-	// hand.print()
-	// remainingCards.print()
+	jim := person{
+		firstName: "Alex",
+		lastName:  "Party",
+		contactInfo: contactInfo{
+			email:   "jimpgmail.com",
+			zipCode: 94000,
+		},
+	}
 
-	// cards.saveToFile("MyCards")
-
-	// cards := newDeckFromFile("MyCards")
-	// cards.print()
-
-	cards := newDeck()
-	cards.shuffle()
-	cards.print()
+	jimPointer := &jim
+	jimPointer.updateName("jimmy")
+	jim.print()
 }
