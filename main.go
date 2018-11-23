@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // ---------------------------------------------
 // Cards
 // ---------------------------------------------
@@ -60,22 +58,56 @@ import "fmt"
 // ---------------------------------------------
 // Maps
 // ---------------------------------------------
-func main() {
-	// structと似てる！
+// func main() {
+// structと似てる！
 
-	// colors := map[string]string{
-	// 	"red":   "#ff0000",
-	// 	"green": "#4327as",
-	// }
+// colors := map[string]string{
+// 	"red":   "#ff0000",
+// 	"green": "#4327as",
+// }
 
-	// var colors map[string]string
+// var colors map[string]string
 
-	colors := make(map[string]string)
-	// structだとcolors.white = hogeみたいな感じになるという相違点
-	// keyとvalueの肩が指定されている(structはされてない)
-	colors["white"] = "#fff"
+// colors := make(map[string]string)
+// // structだとcolors.white = hogeみたいな感じになるという相違点
+// // keyとvalueの肩が指定されている(structはされてない)
+// colors["white"] = "#fff"
 
-	delete(colors, "white")
+// delete(colors, "white")
 
-	fmt.Println(colors)
-}
+// fmt.Println(colors)
+// }
+
+// ---------------------------------------------
+// Interfaces
+// ---------------------------------------------
+// type bot interface {
+// 	getGreeting() string
+// }
+
+// type englishBot struct{}
+// type spanishBot struct{}
+
+// func main() {
+// 	eb := englishBot{}
+// 	sb := spanishBot{}
+
+// 	printGreeting(eb)
+// 	printGreeting(sb)
+// }
+
+// func printGreeting(b bot) {
+// 	fmt.Println(b.getGreeting())
+// }
+
+// func (englishBot) getGreeting() string {
+// 	return "Hi there!"
+// }
+
+// func (spanishBot) getGreeting() string {
+// 	return "Hola!"
+// }
+
+// ---------------------------------------------
+// Interfaces with HTTP requests
+// ---------------------------------------------
