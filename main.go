@@ -111,3 +111,43 @@ package main
 // ---------------------------------------------
 // Interfaces with HTTP requests
 // ---------------------------------------------
+
+// type logWriter struct{}
+
+// func main() {
+// resp, err := http.Get("https://google.com")
+// if err != nil {
+// 	fmt.Println("Error:", err)
+// 	os.Exit(1)
+// }
+
+// fmt.Println(resp)
+
+// bs := make([]byte, 999999)
+// // resp.Bodyはio.ReadCloserインターフェイスをtypeに持つ
+// // Read(byte[]) (int, error)メソッド、Close() (error)メソッドが使える
+// resp.Body.Read(bs)
+// fmt.Println(string(bs))
+
+// interface Writer { Write(p byte[]) (n int, err error)}
+// func Copy(dst Writer, src Reader)
+// io.Copy(os.Stdout, resp.Body)
+
+// 	lw := logWriter{}
+// 	io.Copy(lw, resp.Body)
+// }
+
+// func (logWriter) Write(bs []byte) (int, error) {
+// 	// interfaceのメソッドは必ずしも正しくなくても良い？
+// 	// return 1 nil (-> miss!)
+// 	fmt.Println(string(bs))
+// 	fmt.Println("Just wrote this many bytes", len(bs))
+// 	return len(bs), nil
+// }
+
+// ---------------------------------------------
+// Interfaces with HTTP requests Assignments
+// ---------------------------------------------
+func main() {
+
+}
