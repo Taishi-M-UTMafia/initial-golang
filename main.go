@@ -184,6 +184,9 @@ package main
 // 	fmt.Println(s.getArea())
 // }
 
-func main() {
-
-}
+// func main() {
+// 	// go run main.go hoge.txtとターミナルで打つと、
+// 	// ファイル内容がPrintlnされるプログラム
+// 	// hint -> os.Args, os.Open
+// 	fmt.Println(os.Args)
+// }
